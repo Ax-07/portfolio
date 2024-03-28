@@ -1,4 +1,4 @@
-const serverHost = 'http://localhost:8050';
+const serverHost = `${import.meta.env.VITE_REACT_APP_API_URL}`;
 
 export const sendContact = async (form_data) => {
     console.log(form_data);
