@@ -1,0 +1,54 @@
+.sideNav {
+    position: relative;
+    z-index: 1;
+    width: 350px;
+    padding: 20px;
+    padding: 20px 20px;
+    border: 1px solid $primary-color;
+    border-radius: 25px;
+    box-shadow: 0 0 15px 5px rgba($primary-color, 0.5);
+    
+    &__header {
+        &-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+        &-title {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.2rem;
+        }
+    }
+
+    &__list {
+        padding: 0;
+        margin: 0 0px 0 0;
+    }
+    
+    &__item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        &-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        a {
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+
+        }
+    }
+}

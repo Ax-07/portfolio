@@ -1,0 +1,36 @@
+.todo {
+    &__card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 1rem;
+        margin: 1rem 0;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: #f4f4f4;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    &__imgs {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        margin-top: 1rem;
+
+        > img {
+            width: 30%;
+            height: 100px;
+            object-fit: cover;
+        }
+    }
+    &__btn-delete {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 10px;
+        cursor: pointer;
+    }
+}

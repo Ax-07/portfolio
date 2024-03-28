@@ -1,0 +1,49 @@
+#darkModeBtn {
+    display: none;
+}
+
+.darkModeBtn {
+    &-container {
+        display: flex;
+        justify-content: center;
+    }
+    position: relative;
+    display: flex;
+    width: 25px;
+    height: 25px;
+    box-shadow: 0 1px 2px 0px $primary-color;
+    border-radius: 25px;
+    cursor: pointer;
+    
+    > i {
+        position: absolute;
+        transition: all 0.2s;
+    }
+    
+    > .fa-sun {
+        left: 5px;
+        color: #ffe600;
+        top: 17%;
+
+    }
+    
+    > .fa-moon {
+        right: 5px;
+        transform: translateX(-100%);
+        opacity: 0;
+        top: 20%;
+        color: #d6f1f1;
+    }
+
+    #darkModeBtn:checked ~ & {
+        > .fa-sun {
+            transform: translateX(100%) rotate(90deg);
+            opacity: 0;
+        }
+
+        > .fa-moon {
+            transform: translateX(0) rotate(220deg);
+            opacity: 1;
+        }
+    }
+}

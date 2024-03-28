@@ -1,0 +1,30 @@
+.separateLine {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+
+    &__line {
+        height: 1px;
+        max-width: 30%;
+        border:1px solid $primary-color;
+        animation: width-grow 0.6s linear forwards;
+    }
+    &__icon {
+        width: 7px;
+        height: 7px;
+        border: 1px solid $primary-color;
+        background-color: $primary-color;
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes width-grow {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}

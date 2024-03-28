@@ -1,0 +1,14 @@
+.footer {
+    // position: relative;
+    height: 100px;
+    width: 100%;
+    // background: $background;
+    background: #000;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 15px 0;
+}

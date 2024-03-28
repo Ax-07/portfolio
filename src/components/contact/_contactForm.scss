@@ -1,0 +1,22 @@
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch;
+    width: 300px;
+    gap: 5px;
+    
+    & > * {
+        width: 100%;
+    }
+    & > input, textarea {
+        color: black;
+        padding: 0 10px;
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+    & > button {
+        width: 25%;
+        margin-top: 10px;
+    }
+}

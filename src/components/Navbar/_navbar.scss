@@ -1,0 +1,50 @@
+.nav {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%, -200%);
+    z-index: 0;
+    transition: all 0.4s ease-in-out, top 0.4s ease-in-out;
+
+    &__list {
+        display: flex;
+        gap: 2rem;
+    }
+    &__item {
+        list-style: none;
+    }
+    &__link {
+        font-size: 24px;
+        text-decoration: none;
+        &:hover {
+            color: $accent-color;
+        }
+    }
+    &__link {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.4rem;
+        transition: all 0.3s;
+        
+    }
+}
+.burgerBtn--open ~ .nav {
+    transform: translateX(-50%) translateY(150%);
+    // visibility: visible;
+}
+
+@media screen and (min-width: 1024px) {
+    .nav {
+        position: relative;
+        width: fit-content;
+        left: 0;
+        // visibility: visible;
+        transform: translateX(0%) translateY(0%);
+        &__list {
+            flex-direction: row;
+        }
+    }
+}

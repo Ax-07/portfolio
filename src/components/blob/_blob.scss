@@ -1,0 +1,56 @@
+.blob {
+    &-container {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    position: absolute;
+    z-index: -1;
+    top: 25%;
+    left: 60%;
+    width: 250px;
+    height: 300px;
+    background: radial-gradient(circle 197px at 0% 50%, rgba($primary-color, 0.3) 0%, transparent 100%);
+    border-radius: 50%;
+    transform: rotate(45deg);
+    filter: blur(20px);
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -30%;
+        left: -30%;
+        width: 300px;
+        height: 300px;
+        // background: radial-gradient(ellipse farthest-corner at 00% 50%, rgba($primary-color, 0.1) 0%, transparent 100%);
+        background: radial-gradient( circle 197px at 9% 80.3%,  rgba(55,60,245,0.3) 0%, transparent 100% );
+        filter: drop-shadow(200px -100px 50px rgba($accent-color, 0.7));
+        border-radius: 50%;
+        transform: rotate(15deg);
+        // transition: all 0.5s ease-in-out;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: -40%;
+        left: 20%;
+        width: 300px;
+        height: 300px;
+        background: radial-gradient(circle 197px at 50% 100%, rgba($theme-color-text-secondary, 0.3) 0%, transparent 100%);
+        filter: drop-shadow(150px -150px 50px rgba($primary-color, 1));
+        border-radius: 50%;
+        transform: rotate(125deg);
+        // transition: all 0.1s ease-in-out;
+    }
+
+}
+
+.blob::before {
+    transform: translateY(var(--scroll-position)) ;
+}
+.blob::after {
+    transform: translateY(var(--scroll-position-reverse));
+}

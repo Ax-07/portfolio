@@ -1,0 +1,36 @@
+@import './scss/utils/mixin.scss';
+@import './scss/global/variables.scss';
+@import './scss/global/fonts.scss';
+@import './scss/global/reset.scss';
+@import './scss/global/form.scss';
+
+@import './scss/utils/buttons.scss';
+
+@import './layout/header/header.scss';
+@import './layout/footer/footer.scss';
+
+@import './components/Navbar/navbar.scss';
+@import './components/figure/figureCard.scss';
+
+@import './components/about/about.scss';
+@import './components/separateLines/separateLines.scss';
+@import './components/separateLines/separateLine.scss';
+@import './components/darkModeBtn/darModeBtn.scss';
+@import './components/blob/blob.scss';
+@import './components/customScroll/customScroll.scss';
+@import './components/Todo/todoList.scss';
+@import './components/Todo/todoCard.scss';
+@import './components/formField/addPicture/addPictureForm.scss';
+@import './components/formField/customMultiSelect/customMultiSelect.scss';
+@import './components/btnBurger/btnBurger.scss';
+@import './components/slider/slider.scss';
+@import './components/hero/heroBanner.scss';
+@import './components/projet/projetCard.scss';
+@import './components/navSection/navSection.scss';
+@import './components/sideNav/sideNav.scss';
+@import './components/ligthBox/lightBox.scss';
+@import './components/skill/skill.scss';
+
+
+
+@import './utils/icons/icons.scss';

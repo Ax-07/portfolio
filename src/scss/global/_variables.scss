@@ -1,0 +1,48 @@
+:root {
+    --textcolor: #222;
+}
+:root.dark {
+    --textcolor: #fff;
+}
+
+// Définition des variables de couleur
+$primary-color: #026D00; // Couleur principale
+$secondary-color: #97a695; // Couleur secondaire
+$accent-color: #e74c3c; // Couleur d'accentuation
+$text-color: #222; // Couleur du texte
+$color-grey: #ccc; // Couleur grise
+$color-light: #F8F3E8; // Couleur claire
+
+
+$background:radial-gradient(circle at bottom left, rgba($accent-color, 0.2) 0, rgba(0,07,0, 0.5) 50%) no-repeat, 
+linear-gradient(-45deg, rgba($primary-color, 0.7) 25%, rgb(0, 07, 0, 0.5) 50%) no-repeat,
+radial-gradient(circle at left, rgba($primary-color, 0.8) 0, rgba(0,07,0, 0.5) 50%) no-repeat,
+radial-gradient(circle at top, rgba($primary-color, 0.5) 0, rgba(0,07,0, 0.5) 50%) no-repeat,
+linear-gradient(45deg, rgba($primary-color, 0.7) 25%, rgb(0, 07, 0, 0.5) 50%) no-repeat,
+linear-gradient(0deg, rgba($primary-color, 0.5) 50%, rgb(0, 07, 0, 0.5) 100%) no-repeat; // Couleur de fond
+
+$background-light:radial-gradient(circle at bottom left, rgba($accent-color, 0.02) 0, rgba(252,255,252, 1) 50%) no-repeat, 
+linear-gradient(-45deg, rgba($primary-color, 0.7) 25%, rgba(252,255,252, 1) 50%) no-repeat,
+radial-gradient(circle at left, rgba($primary-color, 0.8) 0,rgba(255,255,252, 1)50%) no-repeat,
+radial-gradient(circle at top, rgba($primary-color, 0.5) 0, rgba(252,255,255, 1) 50%) no-repeat,
+linear-gradient(45deg, rgba($primary-color, 0.7) 25%, rgba(255,255,252, 1) 50%) no-repeat,
+linear-gradient(0deg, rgba($primary-color, 0.5) 50%, rgba(252,255,255, 1) 100%) no-repeat; // Couleur de fond
+
+// Définition des variables pour la typographie
+$base-font-size: 16px;
+$heading-font-size: 24px;
+$theme-color-text-primary: #34495e; // title
+$theme-color-text-secondary: #f26405; // subtitle
+
+/* global */
+
+$header-height: 90px;
+$footer-height: 90px;
+$sideNav-height: 27px;
+
+$color-bg-primary: #000;
+$color-bg-secondary: #252525;
+$color-bg-tertiary: #555561;
+$background-radial: radial-gradient( circle farthest-corner at 50% 50%,  rgba($primary-color,0.5) 8.3%, rgba(0,07,0,1) 79.4% );
+$background-radial-hover: radial-gradient( circle farthest-corner at 50% 50%,  rgba($primary-color,0.7) 8.3%, rgba(0,07,0,1) 100.4% );
+$background-radial-active: radial-gradient( circle farthest-corner at 50% 50%,  $primary-color 8.3%, rgba(0,07,0,1) 100.4% );

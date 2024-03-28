@@ -1,0 +1,54 @@
+.header {
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    padding: 10px 30px;
+    margin: 0 auto 20px;
+    // box-shadow: 0 0 4px 1px $primary-color;
+    backdrop-filter: blur(10px);
+
+    &__logo {
+        text-decoration: none !important;
+        font-weight: 700 !important;
+        height: 100%;
+        cursor: pointer;
+        &:focus {
+            box-shadow: none;
+        }
+        &-text {
+            text-align: left;
+            font-family: "Alex Brush", cursive;
+            font-style: normal;
+            font-size: 50px;
+            &:focus {
+                box-shadow: none;
+            }
+        }
+    }
+
+    // &__nav {
+    //     position: absolute;
+    //     z-index: 0;
+    //     top: 50%;
+    //     left: 50%;
+    //     transform: translate(-50%, -50%);
+    // }
+}
+
+
+@media screen and (max-width: 768px) {
+    .header {
+        align-items: baseline;
+        // height: 100px;
+        padding: 10px 10px;
+
+        &__nav {
+            top: 150%;
+        }
+    }
+}

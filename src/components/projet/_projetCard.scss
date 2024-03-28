@@ -1,0 +1,111 @@
+.projet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    &-list {
+        display: flex;
+        width: 100%;
+        gap: 2rem;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        &__item {
+            width: 320px;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &-card {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        padding: 15px;
+        box-shadow: 0 0 2px 1px rgba($primary-color, 0.7);
+        border-radius: 15px;
+
+        &__img {
+            width: 100%;
+            height: 200px;
+            border-radius: 15px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &__title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        &__stacks {
+            display: flex;
+
+            &-item>img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+
+        &__btn {
+            padding: 10px 20px;
+            min-width: 150px;
+            background: $background-radial;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 0 10px 2px rgba($primary-color, 0.7);
+            cursor: pointer;
+            transition: all 0.3s;
+
+            &:hover {
+                // background-color: darken($primary-color, 10%);
+                background: $background-radial-hover;
+                box-shadow: 0 0 15px 2px rgba($primary-color, 0.8);
+                text-decoration: none;
+            }
+
+            &.active {
+                background: $background-radial-active;
+                box-shadow: 0 0 15px 5px rgba($primary-color, 0.9);
+            }
+        }
+    }
+
+    &__stacks {
+        display: flex;
+    }
+
+    &__link-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: $theme-color-text-primary;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .projet {
+        &-nav {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
