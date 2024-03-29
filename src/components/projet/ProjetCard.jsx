@@ -7,7 +7,7 @@ export const ProjetCard = (projet) => {
     <article className="projet-card">
         <Link to={`/projet/${projet?.id}`}>
       {/* <Slider data={projet.image} />         */}
-      {/* {projet.image && <img className="projet-card__img" src={projet.image[0].image.mobile} alt={projet.alt} />} */}
+      {projet.image && <img className="projet-card__img" src={projet.image[0].image.mobile} alt={projet.alt} />}
       <h2 className="projet-card__title">{projet?.title}</h2>
         <div className="projet-card__content">
           <p>{projet?.description}</p>
