@@ -20,7 +20,7 @@ h6,
 p,
 label,
 a {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 h1 {
@@ -273,6 +273,10 @@ button, .button, .btn {
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }
+.header--open {
+  height: 110px;
+  border-radius: 0 0 25px 25px;
+}
 .header__logo {
   text-decoration: none !important;
   font-weight: 700 !important;
@@ -288,17 +292,29 @@ button, .button, .btn {
   font-style: normal;
   font-size: 50px;
 }
+@media screen and (max-width: 768px) {
+  .header__logo-text {
+    font-size: 40px;
+  }
+}
 .header__logo-text:focus {
   box-shadow: none;
+}
+@media screen and (max-width: 425px) {
+  .header__nav {
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .header {
     align-items: baseline;
     padding: 10px 10px;
-  }
-  .header__nav {
-    top: 150%;
   }
 }
 .footer {
@@ -392,17 +408,24 @@ figure figcaption p {
 }
 
 .about {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   padding: 20px;
-  gap: 50px;
   max-width: 1200px;
 }
+@media screen and (max-width: 768px) {
+  .about {
+    gap: 20px;
+    flex-direction: column;
+  }
+}
 .about__title {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 700;
+  margin-top: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .about__title {
+    font-size: 3rem;
+  }
 }
 .about__sub-title {
   font-size: 2rem;
@@ -410,18 +433,19 @@ figure figcaption p {
   margin-bottom: 20px;
 }
 .about__img {
-  width: 300px;
-  height: 300px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
+  margin: 1rem;
+  float: left;
+  shape-outside: ellipse();
 }
-.about__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  gap: 20px;
-  text-align: center;
+@media screen and (min-width: 1024px) {
+  .about__img {
+    width: 300px;
+    height: 300px;
+    margin: 2rem;
+  }
 }
 .about__text {
   height: -moz-fit-content;
@@ -470,7 +494,6 @@ figure figcaption p {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   gap: 20px;
 }
 .separateLine__line {
@@ -945,7 +968,7 @@ figure figcaption p {
   transition: all 0.4s ease-in-out, top 0.4s ease-in-out;
   position: absolute;
   width: 75%;
-  border: 1px solid #89b9b1;
+  border: 1px solid #222;
 }
 .burgerBtn__line:nth-child(1) {
   top: 25%;
@@ -1198,12 +1221,22 @@ figure figcaption p {
   text-align: center;
 }
 .hero__title {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 700;
 }
+@media screen and (min-width: 768px) {
+  .hero__title {
+    font-size: 3rem;
+  }
+}
 .hero__sub-title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .hero__sub-title {
+    font-size: 2rem;
+  }
 }
 .hero__text {
   position: relative;
@@ -1327,22 +1360,39 @@ figure figcaption p {
   }
 }
 .nav-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
+  position: relative;
+}
+@media screen and (max-width: 425px) {
+  .nav-section {
+    width: 100%;
+  }
 }
 .nav-section__list {
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  justify-content: space-evenly;
   list-style: none;
-  padding: 5px;
   margin: 0;
-  box-shadow: 0 0 3px 0px #026D00;
-  border-radius: 25px;
+  border-radius: 0 0 25px 25px;
   overflow: hidden;
   animation: openNav 0.3s linear forwards;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+}
+@media screen and (max-width: 425px) {
+  .nav-section__list {
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+  }
+}
+@media screen and (min-width: 768px) {
+  .nav-section__list {
+    gap: 1rem;
+    padding: 5px;
+    box-shadow: none;
+    border-radius: 0;
+    animation: none;
+  }
 }
 .nav-section__item {
   display: flex;
@@ -1386,7 +1436,7 @@ figure figcaption p {
     width: 100%;
     height: 40px;
     padding: 5px;
-    box-shadow: 0 1px 2px 0px #026D00;
+    box-shadow: 0 3px 3px 0px #026D00;
   }
 }
 .sideNav {
@@ -1515,7 +1565,11 @@ figure figcaption p {
   justify-content: space-evenly;
   align-items: center;
   margin: 1rem 0;
-  min-width: 600px;
+}
+@media screen and (min-width: 768px) {
+  .skill__list {
+    min-width: 600px;
+  }
 }
 .skill__item {
   display: flex;

@@ -1,16 +1,19 @@
 .about {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
         padding: 20px;
-        gap: 50px;
         max-width: 1200px;
+        @media screen and (max-width: 768px) {
+            gap: 20px;
+            flex-direction: column;
+        }
   
 
         &__title {
-            font-size: 3rem;
+            font-size: 2rem;
             font-weight: 700;
+            margin-top: 2rem;
+            @media screen and (min-width: 768px) {
+                font-size: 3rem;
+            }
         }
     
         &__sub-title {
@@ -20,23 +23,22 @@
         }
     
         &__img {
-            width: 300px;
-            height: 300px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
-            // clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-    
-        }
-    
-        &__content {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            gap: 20px;
-            text-align: center;
+            margin: 1rem;
+            float: left;
+            shape-outside: ellipse();
+            @media screen and (min-width: 1024px) {
+                width: 300px;
+                height: 300px;
+            margin: 2rem;
 
+            }
+    
         }
+    
+
     
         &__text {
             height: fit-content;

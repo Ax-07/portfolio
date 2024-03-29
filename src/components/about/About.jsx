@@ -13,7 +13,6 @@ export const About = () => {
   return (
     <div className="about">
       <img src={profilPicture} alt="profil" className="about__img" />
-      <div className="about__content">
         <h3 className="about__title">A propos de moi</h3>
         <SeparateLine />
         <br />
@@ -23,7 +22,6 @@ export const About = () => {
         <Link className="btn about__cta" to="#projets" data-target="#projets">
           Voir mes projets
         </Link>
-      </div>
     </div>
   );
 };

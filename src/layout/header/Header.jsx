@@ -17,7 +17,7 @@ export const Header = () => {
   const isConnected = useSelector((state) => state.auth.isConnected);
 
   return (
-    <header className="header">
+    <header className={`header ${openDropNav ? 'header--open' : ''}`}>
       <NavLink className="header__logo" to="/#hero">
         <span className="header__logo-text">{"<Ax-@7/>"}</span>
       </NavLink>
