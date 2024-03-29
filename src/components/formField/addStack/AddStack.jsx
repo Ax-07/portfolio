@@ -28,7 +28,7 @@ export const AddStack = ({ stacks, setStacks }) => {
       <button onClick={handleAddStack}>Ajouter</button>
 
       <ul>
-        {stacks.map((stack, index) => (
+        {stacks?.map((stack, index) => (
           <li key={index} onClick={() => handleDeleteStackById(index)}>
             {stack}
           </li>

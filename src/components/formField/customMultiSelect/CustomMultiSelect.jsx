@@ -15,7 +15,13 @@ import { icons } from "../../../utils/icons/icons";
  *
  */
 
-export const CustomMultiSelect = ({ title, options, selectedOption, setSelectedOption, createOption }) => {
+export const CustomMultiSelect = ({
+  title,
+  options,
+  selectedOption,
+  setSelectedOption,
+  createOption,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [optionToAdd, setOptionToAdd] = useState("");
   const ref = useRef(null);
@@ -46,14 +52,16 @@ export const CustomMultiSelect = ({ title, options, selectedOption, setSelectedO
 
   const selectOption = (option) => {
     setSelectedOption((prevSelectedOption) =>
-      prevSelectedOption.includes(option)
+      prevSelectedOption && prevSelectedOption.includes(option)
         ? prevSelectedOption.filter((cat) => cat !== option)
-        : [...prevSelectedOption, option]
+        : [...(prevSelectedOption || []), option]
     ); // Si l'option est déjà sélectionnée, on la retire, sinon on l'ajoute
   };
 
   const cancelOption = (option) => {
-    setSelectedOption(selectedOption.filter((cat) => cat !== option));
+    setSelectedOption(
+      selectedOption ? selectedOption.filter((cat) => cat !== option) : []
+    );
   };
 
   useOutsideClick(ref, () => {
@@ -63,7 +71,12 @@ export const CustomMultiSelect = ({ title, options, selectedOption, setSelectedO
   });
 
   return (
-    <div ref={ref} className={`customSelect ${isOpen ? "open" : ""}`} autoFocus tabIndex="0">
+    <div
+      ref={ref}
+      className={`customSelect ${isOpen ? "open" : ""}`}
+      autoFocus
+      tabIndex="0"
+    >
       <div className="customSelect-container">
         <div className="customSelect__header">
           <div className="customSelect__selected--list">
@@ -92,7 +105,7 @@ export const CustomMultiSelect = ({ title, options, selectedOption, setSelectedO
             optionToAdd={optionToAdd}
             setOptionToAdd={setOptionToAdd}
             addOptionToList={addOptionToList}
-            />
+          />
           <div className="customSelect__list">
             {filteredOptions?.map((option, index) => (
               <CustomSelectOption
@@ -139,8 +152,8 @@ const CustomSelectOption = ({ option, selectedOption, handleSelectOption }) => {
       <input
         type="checkbox"
         id={option.id}
-        checked={selectedOption?.includes(option.name)}
-        onChange={() => handleSelectOption(option.name)} // Ajoutez cette ligne
+        checked={selectedOption ? selectedOption.includes(option.name) : false}
+        onChange={() => handleSelectOption(option.name)}
       />
       <label
         htmlFor={option.name}
@@ -157,7 +170,12 @@ CustomSelectOption.propTypes = {
   handleSelectOption: PropTypes.func,
 };
 
-const CustomSelectCreateOption = ({ title, optionToAdd, setOptionToAdd, addOptionToList }) => {
+const CustomSelectCreateOption = ({
+  title,
+  optionToAdd,
+  setOptionToAdd,
+  addOptionToList,
+}) => {
   return (
     <div className="customSelect__createOption">
       <label htmlFor="option"></label>
@@ -187,17 +205,17 @@ CustomSelectCreateOption.propTypes = {
 };
 
 const useOutsideClick = (ref, callback) => {
-  const handleClick = e => {
+  const handleClick = (e) => {
     if (ref.current && !ref.current.contains(e.target)) {
       callback();
     }
   };
 
   useEffect(() => {
-    document.addEventListener('mousedown', handleClick);
+    document.addEventListener("mousedown", handleClick);
 
     return () => {
-      document.removeEventListener('mousedown', handleClick);
+      document.removeEventListener("mousedown", handleClick);
     };
   });
 };

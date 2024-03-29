@@ -17,7 +17,7 @@ export const ProjetList = () => {
       <br />
       <ul className="projet-list">
       {projets &&
-        projets.map((projet, id) => (
+        projets?.map((projet, id) => (
         <li key={id} className="projet-list__item">
           <ProjetCard  {...projet} />
         </li>)
