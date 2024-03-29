@@ -1551,7 +1551,7 @@ figure figcaption p {
   flex-direction: column;
   align-items: center;
   justify-content: stretch;
-  width: 300px;
+  max-width: 500px;
   gap: 5px;
 }
 .contact__form > * {
@@ -1559,9 +1559,16 @@ figure figcaption p {
 }
 .contact__form > input, .contact__form textarea {
   color: black;
-  padding: 0 10px;
-  border: 1px solid black;
+  padding: 0.5rem;
+  border: 1px solid #026D00;
   border-radius: 5px;
+}
+.contact__form-wrappper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+  text-align: justify;
 }
 .contact__form > button {
   width: 25%;

@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: stretch;
-    width: 300px;
+    max-width: 500px;
     gap: 5px;
     
     & > * {
@@ -11,9 +11,16 @@
     }
     & > input, textarea {
         color: black;
-        padding: 0 10px;
-        border: 1px solid black;
+        padding: 0.5rem;
+        border: 1px solid $primary-color;
         border-radius: 5px;
+    }
+    &-wrappper {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+        text-align: justify;
     }
     & > button {
         width: 25%;
