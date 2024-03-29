@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { sendContact } from "../../api/contactApi";
+import { SeparateLine } from "../separateLines/SeparateLine";
 
 export const ContactForm = () => {
     const [ name, setName ] = useState("");
@@ -22,6 +23,7 @@ export const ContactForm = () => {
     return (
         <div id="contact" className="contact">
             <h3>Contactez moi</h3>
+            <SeparateLine />
             <br />
             <form action="" className="contact__form">
                 <label htmlFor="name" className="contact__form-label"></label>
