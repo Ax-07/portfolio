@@ -54,6 +54,13 @@
     }
 }
 
+.admin-nav {
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translateY(-50%);
+}
+
 
 @media screen and (max-width: 768px) {
     .header {
