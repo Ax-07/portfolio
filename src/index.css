@@ -1546,6 +1546,28 @@ figure figcaption p {
   height: 2.5rem;
 }
 
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: stretch;
+  width: 300px;
+  gap: 5px;
+}
+.contact__form > * {
+  width: 100%;
+}
+.contact__form > input, .contact__form textarea {
+  color: black;
+  padding: 0 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.contact__form > button {
+  width: 25%;
+  margin-top: 10px;
+}
+
 .stack__icon {
   font-size: 32px;
   margin: 0 0.5rem;
