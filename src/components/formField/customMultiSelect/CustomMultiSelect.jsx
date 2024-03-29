@@ -83,14 +83,14 @@ export const CustomMultiSelect = ({
             {selectedOption <= 0 && (
               <div className="customSelect__title">{title}s</div>
             )}
-            {selectedOption?.map((option, index) => (
-              <SelectedOption
-                className="customSelect__selected--item"
-                key={index}
-                option={option}
-                cancelOption={cancelOption}
-              />
-            ))}
+{selectedOption && selectedOption.length > 0 && selectedOption.map((option, index) => (
+  <SelectedOption
+    className="customSelect__selected--item"
+    key={index}
+    option={option}
+    cancelOption={cancelOption}
+  />
+))}
           </div>
           <span
             className={`customSelect__header--icon ${isOpen ? "open" : ""}  `}
@@ -107,14 +107,14 @@ export const CustomMultiSelect = ({
             addOptionToList={addOptionToList}
           />
           <div className="customSelect__list">
-            {filteredOptions?.map((option, index) => (
-              <CustomSelectOption
-                key={index}
-                option={option}
-                selectedOption={selectedOption}
-                handleSelectOption={selectOption}
-              />
-            ))}
+          {filteredOptions && filteredOptions.length > 0 && filteredOptions.map((option, index) => (
+  <CustomSelectOption
+    key={index}
+    option={option}
+    selectedOption={selectedOption}
+    handleSelectOption={selectOption}
+  />
+))}
           </div>
         </div>
       </div>
