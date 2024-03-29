@@ -1553,6 +1553,7 @@ figure figcaption p {
   justify-content: stretch;
   max-width: 500px;
   gap: 5px;
+  margin: 0 20px;
 }
 .contact__form > * {
   width: 100%;
