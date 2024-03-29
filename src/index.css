@@ -1563,7 +1563,7 @@ figure figcaption p {
   border: 1px solid #026D00;
   border-radius: 5px;
 }
-.contact__form-wrappper {
+.contact__form-wrapper {
   display: flex;
   flex-direction: column;
   gap: 5px;
