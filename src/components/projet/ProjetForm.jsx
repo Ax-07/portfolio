@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { AddPicture } from "../formField/addPicture/AddPicture";
-import { useCreateProjetMutation, useGetProjetByIdQuery, useGetProjetQuery, useUpdateProjetMutation } from "../../api/projetApi";
+import { useCreateProjetMutation, useGetProjetQuery, useUpdateProjetMutation } from "../../api/projetApi";
 import { AddFonctionnalite } from "../formField/addFonctionnalite/AddFonctionnalite";
 import { CustomMultiSelect } from "../formField/customMultiSelect/CustomMultiSelect";
 import { useCreateCategorieMutation, useGetCategorieQuery } from "../../api/categorieApi";
@@ -43,7 +43,12 @@ export const ProjetForm = ({projet}) => {
       projetform.current.elements["githubRepository"].value = currentProjet.githubRepository; console.log("githubRepository", projetform.current.elements["githubRepository"].value);
       projetform.current.elements["website"].value = currentProjet.website; console.log("website", projetform.current.elements["website"].value);
       setImages(currentProjet.image);
-      setSelectedCategorie(currentProjet.categorie);
+      let categorie = currentProjet.categorie;
+      if (typeof categorie === 'string') {
+        categorie = [categorie];
+      }
+      
+      setSelectedCategorie(categorie);
       setSelectedStacks(currentProjet.stack);
       console.log("currentProjet", projetform.current);
     } else {
