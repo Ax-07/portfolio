@@ -32,8 +32,8 @@ export const Header = () => {
       </div>
         {isMobile && <BtnBurger windowWidth={windowWidth} />}
 
-      {!isMobile && (
-          <NavLink to="/admin" className={`admin-nav ${isConnected?"admin-nav--connected":""}`}>{isConnected ? icons.user : ""}</NavLink>
+      {!isMobile && isConnected && (
+          <NavLink to="/admin" className={`admin-nav ${isConnected?"admin-nav--connected":""}`}>{icons.user}</NavLink>
       )}
     </header>
   );

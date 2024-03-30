@@ -6,7 +6,6 @@ export const ContactForm = () => {
     const [ name, setName ] = useState("");
     const [ email, setEmail ] = useState("");
     const [ message, setMessage ] = useState("");
-    const [ isChecked, setIsChecked ] = useState(false);
 
     const onSubmit = async (e) => {
         e.preventDefault();

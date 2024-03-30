@@ -26,11 +26,9 @@ export const LoginForm = () => {
 
     return (
         <form onSubmit={onSubmit}>
-            <label htmlFor="email"></label>
-            <input type="email" id="email" placeholder="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+            <input type="email" id="email" placeholder="email" value={email} onChange={(e) => setEmail(e.target.value)} aria-label="Email"/>
             <div className="email error"></div>
-            <label htmlFor="password"></label>
-            <input type="password" id="password" placeholder="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+            <input type="password" id="password" placeholder="password" value={password} onChange={(e) => setPassword(e.target.value)} aria-label="Password"/>
             <div className="password error"></div>
             <button type="submit">Se connecter</button>
         </form>
