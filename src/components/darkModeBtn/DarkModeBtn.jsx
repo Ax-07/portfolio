@@ -51,6 +51,7 @@ export const DarkModeBtn = () => {
         <label htmlFor="darkModeBtn" className="darkModeBtn">
             <i className="fas fa-moon"></i>
             <i className="fas fa-sun"></i>
+            <span>{" "}</span>
         </label>
     </div>
   );
