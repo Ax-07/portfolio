@@ -420,7 +420,7 @@ figure figcaption p {
   height: fit-content;
   position: relative;
   z-index: 1;
-  text-align: justify;
+  text-align: left;
   font-size: 1.125rem;
 }
 .about__cta {
