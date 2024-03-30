@@ -25,7 +25,7 @@ export const ContactForm = () => {
                 <input type="text" id="name" className="contact__form-input" placeholder="Nom*" value={name} onChange={(e) => setName(e.target.value)} aria-label="Nom"/>
                 <input type="email" id="email" className="contact__form-input" placeholder="Email*" value={email} onChange={(e) => setEmail(e.target.value)} aria-label="Email"/>
                 <textarea name="message" id="message" cols="30" rows="5" className="contact__form-input" placeholder="Message*" value={message} onChange={(e) => setMessage(e.target.value)} aria-label="Message"></textarea>
-                <button type="submit" className="contact__form-btn" onClick={onSubmit}>Envoyer</button>
+                <button type="submit" className="btn contact__form-btn" onClick={onSubmit}>Envoyer</button>
             </form>
         </div>
     );

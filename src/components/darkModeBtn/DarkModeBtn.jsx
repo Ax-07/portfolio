@@ -46,6 +46,7 @@ export const DarkModeBtn = () => {
             id="darkModeBtn"
             checked={isDarkMode}
             onChange={toggleDarkMode}
+            aria-label="dark mode button"
         />
         <label htmlFor="darkModeBtn" className="darkModeBtn">
             <i className="fas fa-moon"></i>
