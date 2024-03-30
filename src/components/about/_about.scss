@@ -51,21 +51,5 @@
     
         &__cta {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 10px 20px;
-            border-radius: 5px;
-            background: #333;
-            color: #fff;
-            font-size: 1.25rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            text-decoration: none;
-            margin-top: 20px;
-            transition: all 0.3s ease-in-out;
-    
-            &:hover {
-                background: #555;
-            }
         }
     }

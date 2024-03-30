@@ -19,9 +19,11 @@ export const About = () => {
         <p className="about__text">{text}</p>
         <p className="about__text">{text2}</p>
         <p className="about__text">{text3}</p>
-        <Link className="btn about__cta" to="#projets" data-target="#projets">
+        <div className="about__cta">
+        <Link className="btn" to="#projets" data-target="#projets">
           Voir mes projets
         </Link>
+        </div>
     </div>
   );
 };

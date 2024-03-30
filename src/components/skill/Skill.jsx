@@ -7,7 +7,7 @@ export const Skill = () => {
   const databases = ["mongodb", "sqlite"];
   const tools = ["github", "vscode", "figma"];
   return (
-    <>
+
       <div className="skill">
         <h3 className="skill__title">Compétences</h3>
         <SeparateLine />
@@ -64,6 +64,5 @@ export const Skill = () => {
           })}
         </ul>
       </div>
-    </>
   );
 };

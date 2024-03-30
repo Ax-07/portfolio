@@ -59,9 +59,6 @@
         &.active {
             border-bottom: 1px solid $primary-color;
             box-shadow: 0 0px 3px 0px $primary-color;
-            color: $accent-color;
-            // background: $background-radial-active;
-            // background: linear-gradient($primary-color, $color-bg-primary);
             transition: all 0.3s ease;
         }
     }
