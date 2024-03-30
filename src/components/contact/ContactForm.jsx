@@ -23,12 +23,9 @@ export const ContactForm = () => {
             <SeparateLine />
             <br />
             <form action="" className="contact__form">
-                <label htmlFor="name" className="contact__form-label"></label>
-                <input type="text" id="name" className="contact__form-input" placeholder="Nom*" value={name} onChange={(e) => setName(e.target.value)} />
-                <label htmlFor="email" className="contact__form-label"></label>
-                <input type="email" id="email" className="contact__form-input" placeholder="Email*" value={email} onChange={(e) => setEmail(e.target.value)} />
-                <label htmlFor="message" className="contact__form-label"></label>
-                <textarea name="message" id="message" cols="30" rows="5" className="contact__form-input" placeholder="Message*" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
+                <input type="text" id="name" className="contact__form-input" placeholder="Nom*" value={name} onChange={(e) => setName(e.target.value)} aria-label="Nom"/>
+                <input type="email" id="email" className="contact__form-input" placeholder="Email*" value={email} onChange={(e) => setEmail(e.target.value)} aria-label="Email"/>
+                <textarea name="message" id="message" cols="30" rows="5" className="contact__form-input" placeholder="Message*" value={message} onChange={(e) => setMessage(e.target.value)} aria-label="Message"></textarea>
                 <button type="submit" className="contact__form-btn" onClick={onSubmit}>Envoyer</button>
             </form>
         </div>
