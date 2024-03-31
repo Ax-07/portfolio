@@ -1,0 +1,2 @@
+User-agent: *
+Disallow: /admin/  # Exemple de désactivation de l'indexation du répertoire "admin"
