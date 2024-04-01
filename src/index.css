@@ -1646,6 +1646,21 @@ figure figcaption p {
   animation: 0.5s draw linear forwards;
 }
 
+.iframe {
+  position: relative;
+  width: 1440px;
+  height: 500px;
+  overflow: hidden;
+}
+.iframe__content {
+  position: absolute;
+  top: -200px;
+  left: 0;
+  width: 375px;
+  height: 768px;
+  transform: translate(-50%, -50%) scale(0.5);
+}
+
 .stack__icon {
   font-size: 32px;
   margin: 0 0.5rem;
