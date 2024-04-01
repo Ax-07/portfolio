@@ -37,9 +37,7 @@
             }
     
         }
-    
 
-    
         &__text {
             height: fit-content;
             position: relative;
@@ -51,5 +49,12 @@
     
         &__cta {
             display: flex;
+
+           & > .btn {
+                margin-top: 2rem;
+                font-size: 1.25rem;
+                padding: 12px 30px;
+                border-radius: 35px;
+            }
         }
     }
