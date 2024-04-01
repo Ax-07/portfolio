@@ -10,7 +10,9 @@ export const Projet = () => {
   return (
     <section className="section projet">
       {/* <Slider data={projet.image} /> */}
-      <iframe src={projet.website} style={{width: '1440px', height:' 900px', transform: 'scale(0.5)'}}></iframe>
+      <div className="projet__frame" style={{width: '1440px', height:' 768px'}}>
+      <iframe src={projet.website} style={{width: '1440px', height:' 768px', transform: 'scale(0.5)'}}></iframe>
+      </div>
       <h1 className="projet__title">{projet.title}</h1>
       <ul className="projet-card__stacks">
         {Array.isArray(projet.stack) ? (
