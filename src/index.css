@@ -228,6 +228,12 @@ button:hover, .button:hover, .btn:hover {
   padding: 5px;
 }
 
+.stack__icon {
+  height: 2rem;
+  font-size: 2rem;
+  margin: 0 0.5rem;
+}
+
 .header {
   position: fixed;
   z-index: 10;
@@ -1644,24 +1650,4 @@ figure figcaption p {
 }
 .svg-wrapper:hover .shape {
   animation: 0.5s draw linear forwards;
-}
-
-.iframe {
-  position: relative;
-  width: 1440px;
-  height: 500px;
-  overflow: hidden;
-}
-.iframe__content {
-  position: absolute;
-  top: -200px;
-  left: 0;
-  width: 375px;
-  height: 768px;
-  transform: translate(-50%, -50%) scale(0.5);
-}
-
-.stack__icon {
-  font-size: 32px;
-  margin: 0 0.5rem;
 }/*# sourceMappingURL=index.css.map */
