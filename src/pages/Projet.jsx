@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useGetProjetByIdQuery } from "../api/projetApi";
-import { Slider } from "../components/slider/Slider";
+// import { Slider } from "../components/slider/Slider";
 import { GithubIcon, GlobeIcon, iconsStack } from "../utils/icons/iconsStack";
 
 export const Projet = () => {
@@ -10,8 +10,12 @@ export const Projet = () => {
   return (
     <section className="section projet">
       {/* <Slider data={projet.image} /> */}
-      <div className="projet__frame" style={{width: '1440px', height:' 768px'}}>
-      <iframe src={projet.website} style={{width: '1440px', height:' 768px', transform: 'scale(0.5)'}}></iframe>
+      <div className="projet__frame" style={{position: 'relative', maxWidth: '1440px', height:' 768px'}}>
+      <iframe src={projet.website} style={{position: 'absolute',
+top: '0',
+left: '0',
+width: '100%',
+height: '100%', transform:'scale(0.5)'}}></iframe>
       </div>
       <h1 className="projet__title">{projet.title}</h1>
       <ul className="projet-card__stacks">
