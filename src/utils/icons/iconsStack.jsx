@@ -8,6 +8,7 @@ import mongoDb from '../../assets/icons/mongodb-ar21.svg';
 import iconVscode from '../../assets/icons/iconVsCode.svg';
 import redux from '../../assets/icons/redux.svg';
 import figma from '../../assets/icons/figma.svg';
+import csharp from '../../assets/icons/c-sharp-icon.svg';
 import { DarkModeContext } from '../../components/darkModeBtn/DarkModeBtn';
 import { useContext } from 'react';
 
@@ -49,6 +50,7 @@ export const MongodbIcon = () => <img src={mongoDb} alt='mongodb icon' className
 export const VscodeIcon = () => <img src={iconVscode} alt='vscode icon' className='stack__icon' />;
 export const ReduxIcon = () => <img src={redux} alt='redux icon' className='stack__icon' />;
 export const FigmaIcon = () => <img src={figma} alt='figma icon' className='stack__icon' />;
+export const CsharpIcon = () => <img src={csharp} alt='csharp icon' className='stack__icon' />;
 
 export const iconsStack = [
   { name: 'html', component: <HtmlIcon /> },
@@ -69,4 +71,5 @@ export const iconsStack = [
   { name: 'vscode', component: <VscodeIcon /> },
   { name: 'redux', component: <ReduxIcon /> },
   { name: 'figma', component: <FigmaIcon /> },
+  { name: 'c#', component: <CsharpIcon /> },
 ];
