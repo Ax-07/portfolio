@@ -209,15 +209,15 @@ button, .button, .btn {
   min-width: 100px;
   padding: 10px 20px;
   margin: 0 auto;
-  border: none;
+  border: 1px solid #026D00;
   border-radius: 25px;
   text-align: center;
-  font-size: 14px;
+  font-size: 1rem;
   cursor: pointer;
 }
 button:hover, .button:hover, .btn:hover {
   background: radial-gradient(circle farthest-corner at 50% 50%, rgba(2, 109, 0, 0.5) 8.3%, rgb(0, 7, 0) 79.4%);
-  box-shadow: 0 1px 3px 0px #026D00;
+  box-shadow: 0 0px 10px 0px #026D00;
 }
 
 .button-dark {
@@ -434,6 +434,12 @@ figure figcaption p {
 }
 .about__cta {
   display: flex;
+}
+.about__cta > .btn {
+  margin-top: 2rem;
+  font-size: 1.25rem;
+  padding: 12px 30px;
+  border-radius: 35px;
 }
 
 .separateLines {
@@ -1591,8 +1597,50 @@ figure figcaption p {
 }
 .contact__form *:focus {
   box-shadow: 0 0px 1px 1px #026d00;
-  border-radius: 5px;
   outline: none;
+}
+
+.svg-wrapper {
+  height: 60px;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 320px;
+}
+
+.shape {
+  fill: transparent;
+  stroke-dasharray: 100 540;
+  stroke-dashoffset: -474;
+  stroke-width: 8px;
+  stroke: rgb(25, 195, 246);
+}
+
+.text {
+  color: #fff;
+  font-family: "Roboto Condensed";
+  font-size: 22px;
+  letter-spacing: 8px;
+  line-height: 32px;
+  position: relative;
+  top: -48px;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+  }
+  100% {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    stroke-width: 2px;
+  }
+}
+.svg-wrapper:hover .shape {
+  animation: 0.5s draw linear forwards;
 }
 
 .stack__icon {
