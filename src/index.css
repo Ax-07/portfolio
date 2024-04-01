@@ -304,6 +304,9 @@ button:hover, .button:hover, .btn:hover {
   gap: 1rem;
   padding: 15px 0;
 }
+.footer .fa-github, .footer .fa-codepen {
+  color: #fff !important;
+}
 
 .nav {
   position: absolute;
