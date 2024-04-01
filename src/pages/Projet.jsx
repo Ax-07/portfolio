@@ -10,7 +10,7 @@ export const Projet = () => {
   return (
     <section className="section projet">
       {/* <Slider data={projet.image} /> */}
-      <div className="projet__frame" style={{position: 'relative', width: '1440px', height:' 768px'}}>
+      <div className="projet__frame" style={{position: 'relative',width:'100%', maxWidth: '1440px', height:' 768px'}}>
       <iframe src={projet.website} style={{position: 'absolute',
 top: '0',
 left: '0',
