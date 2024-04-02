@@ -85,7 +85,7 @@ section {
   width: 100%;
   min-height: 100vh;
   margin: 0 auto;
-  padding: 100px 0;
+  padding: 110px 0;
   flex: 1;
 }
 section:nth-child(2n) {
