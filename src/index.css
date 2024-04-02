@@ -40,7 +40,7 @@ h3 {
 }
 @media screen and (max-width: 425px) {
   h3 {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
 }
 
@@ -409,14 +409,7 @@ figure figcaption p {
   }
 }
 .about__title {
-  font-size: 2rem;
-  font-weight: 700;
   margin-top: 2rem;
-}
-@media screen and (min-width: 768px) {
-  .about__title {
-    font-size: 3rem;
-  }
 }
 .about__sub-title {
   font-size: 2rem;
@@ -482,7 +475,7 @@ figure figcaption p {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 .separateLine__line {
   height: 1px;
@@ -1534,9 +1527,6 @@ figure figcaption p {
 }
 
 .skill {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   width: 100%;
   max-width: 1200px;
   padding: 20px;
