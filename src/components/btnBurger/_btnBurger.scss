@@ -8,6 +8,8 @@
     width: 40px;
     height: 40px;
     background: transparent;
+    user-select: none;
+
     // overflow: hidden;
     cursor: pointer;
     &__lines {
@@ -22,7 +24,7 @@
         position: absolute;
         width: 75%;
 
-        border: 1px solid #222;
+        border: 1px solid var(--textcolor);
 
         &:nth-child(1) {
             top: 25%;
@@ -49,9 +51,9 @@
 
 .burgerBtn--open .burgerBtn__line:nth-child(2) {
     border-left: none;
-    border-top: 1px solid #89b9b1;
-    border-right: 3px solid #89b9b1;
-    border-bottom: 1px solid #89b9b1;
+    border-top: 1px solid var(--textcolor);
+    border-right: 3px solid var(--textcolor);
+    border-bottom: 1px solid var(--textcolor);
     animation: btnBurgerAnimation 0.4s ease-in-out forwards;
     transition: all 0.4s ease-in-out;
 

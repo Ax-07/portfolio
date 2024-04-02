@@ -3,7 +3,7 @@
   --textcolor: #222;
 }
 
-:root.dark {
+:root body.dark-mode {
   --textcolor: #fff;
 }
 
@@ -85,7 +85,7 @@ section {
   width: 100%;
   min-height: 100vh;
   margin: 0 auto;
-  padding: 110px 0;
+  padding: 110px 10px;
   flex: 1;
 }
 section:nth-child(2n) {
@@ -934,6 +934,9 @@ figure figcaption p {
   width: 40px;
   height: 40px;
   background: transparent;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   cursor: pointer;
 }
 .burgerBtn__lines {
@@ -946,7 +949,7 @@ figure figcaption p {
   transition: all 0.4s ease-in-out, top 0.4s ease-in-out;
   position: absolute;
   width: 75%;
-  border: 1px solid #222;
+  border: 1px solid var(--textcolor);
 }
 .burgerBtn__line:nth-child(1) {
   top: 25%;
@@ -969,9 +972,9 @@ figure figcaption p {
 
 .burgerBtn--open .burgerBtn__line:nth-child(2) {
   border-left: none;
-  border-top: 1px solid #89b9b1;
-  border-right: 3px solid #89b9b1;
-  border-bottom: 1px solid #89b9b1;
+  border-top: 1px solid var(--textcolor);
+  border-right: 3px solid var(--textcolor);
+  border-bottom: 1px solid var(--textcolor);
   animation: btnBurgerAnimation 0.4s ease-in-out forwards;
   transition: all 0.4s ease-in-out;
 }
@@ -1667,11 +1670,23 @@ figure figcaption p {
   height: 188%;
   margin: 0 auto;
 }
+@media screen and (max-width: 425px) {
+  .iframe__container {
+    width: 200%;
+    height: 300%;
+    transform: translate(-50%, -50%) scale(0.25);
+  }
+}
 .iframe--desktop {
   max-width: 1440px;
 }
+@media screen and (max-width: 425px) {
+  .iframe--desktop {
+    width: 1440px;
+  }
+}
 .iframe--tablet {
-  max-width: 768px;
+  width: 769px;
 }
 .iframe--mobile {
   max-width: 375px;
