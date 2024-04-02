@@ -4,10 +4,13 @@ import { icons } from '../../utils/icons/icons';
 
 export const Iframe = ({src}) => {
     const [ view, setView ] = useState('desktop');
+    const [ isLoaded, setIsLoaded ] = useState(false);
+
     return (
         <div className='iframe'>
-        <div className={`iframe__container iframe--${view}`}>
-      <iframe src={src} className='iframe__content'></iframe>
+            {!isLoaded && <div className="loader"></div>}
+         <div className={`iframe__container iframe--${view}`}>
+      <iframe src={src} className='iframe__content' onLoad={()=> setIsLoaded(true)}></iframe>
       </div>
         <div className="iframe__view">
             <span
