@@ -26,7 +26,7 @@ export const projetApi = createApi({
     updateProjet: builder.mutation({ 
       query: ({ id, body }) => ({ 
         url: `/${id}`, 
-        method: 'PUT', 
+        method: 'PATCH', 
         body
       }),
       // Invalidation du tag 'Projet' avec l'ID après cette mutation
