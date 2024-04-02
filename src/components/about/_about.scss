@@ -55,6 +55,11 @@
                 font-size: 1.25rem;
                 padding: 12px 30px;
                 border-radius: 35px;
+
+                @media screen and (max-width: 425px) {
+                    font-size: 1rem;
+                    
+                }
             }
         }
     }
