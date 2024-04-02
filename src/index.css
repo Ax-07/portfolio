@@ -1372,14 +1372,6 @@ figure figcaption p {
   border-radius: 0 0 25px 25px;
   overflow: hidden;
   animation: openNav 0.3s linear forwards;
-  -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
-}
-@media screen and (max-width: 425px) {
-  .nav-section__list {
-    -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
-  }
 }
 @media screen and (min-width: 768px) {
   .nav-section__list {
